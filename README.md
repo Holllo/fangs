@@ -2,7 +2,7 @@
 
 > Inject custom DuckDuckGo Bangs into your browsing experience.
 
-[![Fangs on AMO](https://img.shields.io/amo/v/holllo-fangs)](https://addons.mozilla.org/firefox/addon/holllo-fangs)
+[![Fangs on AMO](https://img.shields.io/amo/v/fangs)](https://addons.mozilla.org/firefox/addon/fangs)
 
 ![Fangs 0.1.0](./screenshots/fangs-version-0-1-0.png)
 
@@ -11,7 +11,7 @@
 You can install Fangs through [Mozilla Addons], [installing from a file] (see [the Releases page] for a prebuilt version) or building [from source](#development).
 
 [installing from a file]: https://support.mozilla.org/en-US/kb/find-and-install-add-ons-add-features-to-firefox#w_how-do-i-find-and-install-add-ons
-[Mozilla Addons]: https://addons.mozilla.org/firefox/addon/holllo-fangs/
+[Mozilla Addons]: https://addons.mozilla.org/firefox/addon/fangs/
 [the Releases page]: https://github.com/Holllo/fangs/releases
 
 ## Development
