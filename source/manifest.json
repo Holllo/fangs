@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json.schemastore.org/webextension",
+  "manifest_version": 2,
+  "name": "Fangs",
+  "description": "Inject custom DuckDuckGo Bangs into your browsing experience.",
+  "version": "0.1.0",
+  "permissions": [
+    "storage",
+    "tabs",
+    "webNavigation"
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'self'; style-src 'unsafe-inline'",
+  "web_accessible_resources": [
+    "assets/**"
+  ],
+  "icons": {
+    "128": "assets/fangs-128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "128": "assets/fangs-128.png"
+    }
+  },
+  "options_ui": {
+    "page": "options/index.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "scripts": [
+      "background-scripts/initialize.ts"
+    ]
+  }
+}

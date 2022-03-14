@@ -1,0 +1,22 @@
+@use '../mixins';
+
+.page-header {
+  @include mixins.responsive-container;
+
+  border: 1px solid var(--df-1);
+  margin-bottom: 16px;
+
+  h1 {
+    align-items: center;
+    display: flex;
+  }
+
+  img {
+    background-color: var(--df-1);
+    display: inline-block;
+    height: 4.5rem;
+    margin-right: 1rem;
+    padding: 8px;
+    width: 4.5rem;
+  }
+}

@@ -1,0 +1,9 @@
+@use '../mixins';
+
+.page-footer {
+  @include mixins.responsive-container;
+
+  border: 1px solid var(--df-2);
+  margin-bottom: 16px;
+  padding: 16px;
+}

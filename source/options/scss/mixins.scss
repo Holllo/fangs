@@ -1,0 +1,11 @@
+@use 'variables';
+
+@mixin responsive-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: variables.$large-breakpoint;
+
+  @media (max-width: variables.$large-breakpoint) {
+    width: 100%;
+  }
+}

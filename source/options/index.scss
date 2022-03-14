@@ -1,0 +1,31 @@
+@use '../../node_modules/modern-normalize/modern-normalize.css';
+@use 'scss/reset';
+@use 'scss/mixins';
+@use 'scss/love';
+@use 'scss/components/page-header';
+@use 'scss/components/page-main';
+@use 'scss/components/page-footer';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--db-1);
+  color: var(--df-1);
+  font-size: 1.5rem;
+  padding: 16px;
+}
+
+a {
+  color: var(--da-3);
+
+  &:hover {
+    color: var(--df-2);
+  }
+}
+
+:focus {
+  outline-color: var(--df-1);
+  outline-width: 2px;
+}

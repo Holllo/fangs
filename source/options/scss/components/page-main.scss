@@ -1,0 +1,146 @@
+@use '../mixins';
+
+.page-main {
+  @include mixins.responsive-container;
+
+  display: grid;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.bang-editor-inner {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 16px;
+
+  .input-group {
+    background-color: var(--db-2);
+    border: 1px solid var(--df-1);
+    padding: 8px;
+
+    label,
+    input {
+      display: block;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    input {
+      background-color: var(--db-1);
+      border: none;
+      color: var(--df-1);
+      padding: 4px;
+      width: 100%;
+    }
+  }
+
+  .button-group {
+    display: flex;
+    gap: 8px;
+  }
+
+  .button {
+    background-color: var(--da-3);
+    border: 1px solid var(--da-3);
+    color: var(--db-1);
+    cursor: pointer;
+    font-weight: bold;
+    padding: 8px;
+    width: 100%;
+
+    &.destructive {
+      background-color: var(--da-1);
+      border-color: var(--da-1);
+    }
+
+    &:hover {
+      background-color: var(--df-2);
+      border-color: var(--df-2);
+    }
+  }
+
+  .validate-error {
+    align-items: center;
+    border: 1px solid var(--da-1);
+    color: var(--da-1);
+    display: flex;
+    font-weight: bold;
+    padding: 4px;
+  }
+}
+
+.bang-editor,
+.bang-list,
+.usage {
+  border: 1px solid var(--df-2);
+
+  &[open] {
+    summary {
+      background-color: var(--df-2);
+      color: var(--db-1);
+      margin-bottom: 16px;
+    }
+
+    > :not(summary) {
+      padding: 0 16px;
+    }
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 16px;
+
+    &:hover {
+      background-color: var(--df-1);
+      color: var(--db-1);
+    }
+  }
+}
+
+.bang-list {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 16px;
+
+    li {
+      list-style: none;
+    }
+
+    button {
+      align-items: center;
+      background-color: var(--db-2);
+      border: 1px solid var(--df-1);
+      color: var(--df-1);
+      cursor: pointer;
+      display: flex;
+      padding: 16px;
+      width: 100%;
+
+      &:hover {
+        background-color: var(--da-3);
+        border-color: var(--da-3);
+        color: var(--db-1);
+      }
+    }
+
+    .bang-id {
+      font-size: 80%;
+      font-weight: bold;
+      margin-left: auto;
+    }
+  }
+}
+
+.usage {
+  ul {
+    list-style: square;
+    margin: 4px 0 2rem 16px;
+  }
+}
