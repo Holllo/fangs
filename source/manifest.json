@@ -29,5 +29,10 @@
     "scripts": [
       "background-scripts/initialize.ts"
     ]
+  },
+  "applications": {
+    "gecko": {
+      "id": "{cbb8b06b-9d6f-42f2-9d8d-7581f411653c}"
+    }
   }
 }
