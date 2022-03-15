@@ -118,6 +118,7 @@ export class PageMain extends Component<Props, State> {
     const {bangs, editorError} = this.state;
 
     const availableBangs = bangs.map((bang) => {
+      const active = bang.id === this.state.editorBang.id ? 'active' : '';
       const onClick = () => {
         this.setState({
           editorBang: {...bang},
@@ -126,7 +127,7 @@ export class PageMain extends Component<Props, State> {
 
       return html`
         <li>
-          <button onClick=${onClick}>
+          <button class="${active}" onClick=${onClick}>
             ${bang.name}<span class="bang-id">${bang.id}</span>
           </button>
         </li>

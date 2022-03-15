@@ -123,6 +123,11 @@
       padding: 16px;
       width: 100%;
 
+      &.active {
+        border-color: var(--da-3);
+        color: var(--da-3);
+      }
+
       &:hover {
         background-color: var(--da-3);
         border-color: var(--da-3);
