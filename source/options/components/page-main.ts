@@ -37,7 +37,8 @@ export class PageMain extends Component<Props, State> {
 
     const bangs = Object.entries(localStorage)
       .filter(([key, _bang]) => key.startsWith('!'))
-      .map(([_key, bang]) => bang as BangParameters);
+      .map(([_key, bang]) => bang as BangParameters)
+      .sort((a, b) => a.id.localeCompare(b.id));
 
     this.setState({bangs: this.state.bangs.concat(bangs)});
   }
