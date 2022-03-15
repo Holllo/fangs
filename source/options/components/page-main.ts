@@ -132,6 +132,8 @@ export class PageMain extends Component<Props, State> {
             editorBang: {...bang},
           });
         }
+
+        document.querySelector('.bang-editor')?.setAttribute('open', 'true');
       };
 
       return html`
