@@ -120,9 +120,18 @@ export class PageMain extends Component<Props, State> {
     const availableBangs = bangs.map((bang) => {
       const active = bang.id === this.state.editorBang.id ? 'active' : '';
       const onClick = () => {
-        this.setState({
-          editorBang: {...bang},
-        });
+        const allEqual = Object.entries(this.state.editorBang).every(
+          ([key, value]) => bang[key as keyof BangParameters] === value,
+        );
+        if (allEqual) {
+          this.setState({
+            editorBang: {...this.emptyBang},
+          });
+        } else {
+          this.setState({
+            editorBang: {...bang},
+          });
+        }
       };
 
       return html`
