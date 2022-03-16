@@ -19,6 +19,7 @@ fs.mkdirSync(path.join(currentDir, 'firefox'), {recursive: true});
 export default defineConfig({
   build: {
     outDir: buildDir,
+    minify: false,
     sourcemap: 'inline',
   },
   plugins: [
