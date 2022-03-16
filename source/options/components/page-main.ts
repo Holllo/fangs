@@ -1,3 +1,4 @@
+import {ConfirmButton} from '@holllo/gram';
 import {html} from 'htm/preact';
 import {Component} from 'preact';
 import browser from 'webextension-polyfill';
@@ -197,9 +198,14 @@ export class PageMain extends Component<Props, State> {
 
             <div class="button-group">
               <button class="button" onClick=${this.saveBang}>Save</button>
-              <button class="button destructive" onClick=${this.removeBang}>
-                Remove
-              </button>
+              <${ConfirmButton}
+                class="button destructive"
+                click=${this.removeBang}
+                confirmClass="confirm"
+                confirmText="Confirm Removal"
+                text="Remove ${this.state.editorBang.id}"
+                timeout=${5 * 1000}
+              />
             </div>
             ${validateError}
           </div>
