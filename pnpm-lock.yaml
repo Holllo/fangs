@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@holllo/gram': ^0.1.0
   '@preact/preset-vite': ^2.1.7
   '@types/webextension-polyfill': ^0.8.2
   ava: ^4.1.0
@@ -22,6 +23,7 @@ specifiers:
   xo: ^0.48.0
 
 dependencies:
+  '@holllo/gram': 0.1.0_htm@3.1.0+preact@10.6.6
   htm: 3.1.0
   modern-normalize: 1.1.0
   preact: 10.6.6
@@ -346,6 +348,16 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@holllo/gram/0.1.0_htm@3.1.0+preact@10.6.6:
+    resolution: {integrity: sha512-91YcLRGUjNtFkE6qQhOuw6C2tNbJ7/SMdZa0hITjRLE2c7wzCSte5Wta9Uj3xLZh4kguO/S5QHmLHWmtUWqYog==}
+    peerDependencies:
+      htm: 3.x
+      preact: 10.x
+    dependencies:
+      htm: 3.1.0
+      preact: 10.6.6
+    dev: false
 
   /@humanwhocodes/config-array/0.9.5:
     resolution: {integrity: sha512-ObyMyWxZiCu/yTisA7uzx81s40xR2fD5Cg/2Kq7G02ajkNubJf6BopgDTmDyc3U7sXpNKM8cYOw7s7Tyr+DnCw==}

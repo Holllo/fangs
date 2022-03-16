@@ -1,8 +1,7 @@
+import {PrivacyLink} from '@holllo/gram';
 import {html} from 'htm/preact';
 import {Component} from 'preact';
 import browser from 'webextension-polyfill';
-
-import {Link} from './link.js';
 
 type Props = {
   manifest: browser.Manifest.ManifestBase;
@@ -14,14 +13,15 @@ export class PageFooter extends Component<Props> {
     const version = manifest.version;
 
     const donateLink = html`
-      <${Link} text="Donate" url="https://github.com/sponsors/Bauke" />
+      <${PrivacyLink} href="https://github.com/sponsors/Bauke">Donate<//>
     `;
 
     const versionLink = html`
-      <${Link}
-        text="v${version}"
-        url="https://github.com/Holllo/fangs/releases/tag/${version}"
-      />
+      <${PrivacyLink}
+        href="https://github.com/Holllo/fangs/releases/tag/${version}"
+      >
+        v${version}
+      <//>
     `;
 
     return html`
