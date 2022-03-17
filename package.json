@@ -11,7 +11,7 @@
     "test": "xo && stylelint 'source/**/*.scss' && tsc && c8 ava"
   },
   "dependencies": {
-    "@holllo/gram": "^0.2.0",
+    "@holllo/gram": "^0.2.1",
     "htm": "^3.1.0",
     "modern-normalize": "^1.1.0",
     "preact": "^10.6.6",
