@@ -4,7 +4,7 @@
 
 [![Fangs on AMO](https://img.shields.io/amo/v/fangs)](https://addons.mozilla.org/firefox/addon/fangs)
 
-![Fangs 0.1.0](./screenshots/fangs-version-0-1-0.png)
+![Fangs 0.1.3](./screenshots/fangs-version-0-1-3.png)
 
 ## Installation
 
