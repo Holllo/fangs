@@ -7,8 +7,6 @@ import {PageHeader} from './components/page-header.js';
 import {PageMain} from './components/page-main.js';
 
 window.addEventListener('DOMContentLoaded', () => {
-  console.debug('Options page opened!');
-
   const manifest = browser.runtime.getManifest();
 
   render(html`<${OptionsPage} manifest=${manifest} />`, document.body);
