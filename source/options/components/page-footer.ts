@@ -12,16 +12,18 @@ export class PageFooter extends Component<Props> {
     const {manifest} = this.props;
     const version = manifest.version;
 
+    const donateLinkAttributes = {
+      href: 'https://github.com/sponsors/Bauke',
+    };
     const donateLink = html`
-      <${PrivacyLink} href="https://github.com/sponsors/Bauke">Donate<//>
+      <${PrivacyLink} attributes=${donateLinkAttributes}>Donate<//>
     `;
 
+    const versionLinkAttributes = {
+      href: `https://github.com/Holllo/fangs/releases/tag/${version}`,
+    };
     const versionLink = html`
-      <${PrivacyLink}
-        href="https://github.com/Holllo/fangs/releases/tag/${version}"
-      >
-        v${version}
-      <//>
+      <${PrivacyLink} attributes=${versionLinkAttributes}>v${version}<//>
     `;
 
     return html`
