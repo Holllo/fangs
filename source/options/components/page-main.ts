@@ -1,4 +1,4 @@
-import {ConfirmButton} from '@holllo/gram';
+import {ConfirmButton, FeedbackButton} from '@holllo/gram';
 import {html} from 'htm/preact';
 import {Component} from 'preact';
 import browser from 'webextension-polyfill';
@@ -99,7 +99,8 @@ export class PageMain extends Component<Props, State> {
         throw error;
       }
 
-      return;
+      // Return false to make the FeedbackButton not show feedback.
+      return false;
     }
 
     const bangs = this.state.bangs;
@@ -197,7 +198,13 @@ export class PageMain extends Component<Props, State> {
             ${editorInputs}
 
             <div class="button-group">
-              <button class="button" onClick=${this.saveBang}>Save</button>
+              <${FeedbackButton}
+                attributes=${{class: 'button'}}
+                click=${this.saveBang}
+                feedbackText="Saved"
+                text="Save"
+                timeout=${5 * 1000}
+              />
               <${ConfirmButton}
                 class="button destructive"
                 click=${this.removeBang}
