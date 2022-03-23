@@ -2,9 +2,15 @@ import browser from 'webextension-polyfill';
 
 import Bang, {BangParameters} from '../bang/bang.js';
 
-browser.browserAction.onClicked.addListener(async () => {
+async function browserActionClicked() {
   await browser.runtime.openOptionsPage();
-});
+}
+
+if (import.meta.env.VITE_BROWSER === 'chromium') {
+  browser.action.onClicked.addListener(browserActionClicked);
+} else {
+  browser.browserAction.onClicked.addListener(browserActionClicked);
+}
 
 browser.runtime.onInstalled.addListener(async () => {
   if (import.meta.env.DEV) {
