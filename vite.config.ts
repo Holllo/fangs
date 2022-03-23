@@ -9,6 +9,8 @@ import {defineConfig} from 'vite';
 import preactPreset from '@preact/preset-vite';
 import webExtension from 'vite-plugin-web-extension';
 
+import createManifest from './source/manifest.js';
+
 const targetBrowser = process.env.VITE_BROWSER ?? 'firefox';
 process.env.VITE_BROWSER = targetBrowser;
 
@@ -47,7 +49,7 @@ export default defineConfig({
     webExtension({
       assets: 'assets',
       browser: targetBrowser,
-      manifest: path.join(sourceDir, 'manifest.json'),
+      manifest: () => createManifest(targetBrowser),
       webExtConfig,
     }),
   ],
