@@ -5,8 +5,11 @@
   "private": true,
   "scripts": {
     "start": "vite build -m development --watch",
+    "start:chromium": "VITE_BROWSER=chromium pnpm start",
     "clean": "trash build web-ext-artifacts",
-    "build": "pnpm clean && vite build && web-ext build --source-dir build && pnpm zip-source",
+    "build": "pnpm clean && pnpm build:chromium && pnpm build:firefox && pnpm zip-source",
+    "build:chromium": "VITE_BROWSER=chromium vite build && web-ext build -n fangs-chromium-{version}.zip -s build/chromium",
+    "build:firefox": "VITE_BROWSER=firefox vite build && web-ext build -n fangs-firefox-{version}.zip -s build/firefox",
     "zip-source": "git archive --format zip --output web-ext-artifacts/fangs-source.zip HEAD",
     "test": "xo && stylelint 'source/**/*.scss' && tsc && c8 ava"
   },
