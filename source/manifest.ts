@@ -7,7 +7,7 @@ export default function createManifest(
     name: 'Fangs',
     description:
       'Inject custom DuckDuckGo Bangs into your browsing experience.',
-    version: '0.1.3',
+    version: '0.1.4',
     permissions: ['storage', 'tabs', 'webNavigation'],
     options_ui: {
       page: 'options/index.html',
