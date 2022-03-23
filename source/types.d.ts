@@ -13,6 +13,7 @@ declare global {
     readonly DEV: boolean;
     readonly MODE: string;
     readonly PROD: boolean;
+    readonly VITE_BROWSER: 'chromium' | 'firefox';
   }
 
   type HtmComponent = ReturnType<typeof html>;
