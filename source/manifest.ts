@@ -19,6 +19,8 @@ export default function createManifest(
     128: 'assets/fangs-128.png',
   };
 
+  manifest.icons = icons;
+
   const browserAction = {
     default_icon: icons,
   };
