@@ -2,7 +2,9 @@
 
 > Inject custom DuckDuckGo Bangs into your browsing experience.
 
-[![Fangs on AMO](https://img.shields.io/amo/v/fangs)](https://addons.mozilla.org/firefox/addon/fangs)
+[![Get Fangs for Firefox](./images/mozilla-addons.png)](https://addons.mozilla.org/firefox/addon/fangs)
+[![Get Fangs for Chrome](./images/chrome-web-store.png)](https://chrome.google.com/webstore/detail/dlllfannplfkhbiidhihagjkbmcolclf)
+[![Get Fangs for Edge](./images/microsoft.png)](https://microsoftedge.microsoft.com/addons/detail/fgfkpbflhnljpfniippaagjjlncobhjd)
 
 ![Fangs 0.1.3](./screenshots/fangs-version-0-1-3.png)
 
