@@ -8,7 +8,7 @@ export default function createManifest(
     description:
       'Inject custom DuckDuckGo Bangs into your browsing experience.',
     version: '0.1.4',
-    permissions: ['storage', 'tabs', 'webNavigation'],
+    permissions: ['storage', 'webNavigation'],
     options_ui: {
       page: 'options/index.html',
       open_in_tab: true,
