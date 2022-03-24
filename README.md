@@ -6,7 +6,7 @@
 [![Get Fangs for Chrome](./images/chrome-web-store.png)](https://chrome.google.com/webstore/detail/dlllfannplfkhbiidhihagjkbmcolclf)
 [![Get Fangs for Edge](./images/microsoft.png)](https://microsoftedge.microsoft.com/addons/detail/fgfkpbflhnljpfniippaagjjlncobhjd)
 
-![Fangs 0.1.3](./screenshots/fangs-version-0-1-3.png)
+![Fangs 0.1.3](./images/fangs-version-0-1-3.png)
 
 ## Installation
 
